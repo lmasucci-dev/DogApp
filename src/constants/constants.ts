@@ -1,6 +1,10 @@
 enum Routes {
     Home = 'Home',
-    BreedsDetails = 'BreedsDetails',
+    Users = 'Usuarios',
+    MyRoutine = 'Mi rutina',
+    MyRoutineDayDetail = 'Hoy',
+    Excercises = 'Ejercicios',
+    RoutinesTemplate = 'Plantilla de rutinas'
   }
   
   export default Routes;
