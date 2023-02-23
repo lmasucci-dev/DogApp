@@ -1,6 +1,12 @@
 import React from 'react'
 import { Text, TouchableOpacity, View, StyleSheet } from 'react-native'
 
+const MOCK_MY_ROUTINE = [
+    {name: 'Press de banca', series: 4, repeticiones: 12, peso: 12.5, observacion: 'Ojo no lastimarse el codo'},
+    {name: 'Press militar mancuerna', series: 4, repeticiones: 15, peso: 7, observacion: ''},
+    {name: 'Sentadilla con salto', series: 4, repeticiones: 20, peso: 0, observacion: 'ojo las rodillas'}
+]
+
 const MyRoutineDayDetail = ({ day }) => {
     return (
         <View style={styles.container}>

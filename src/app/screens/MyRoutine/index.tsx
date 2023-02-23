@@ -7,7 +7,7 @@ const MyRoutine = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.MyRoutineDayDetail, { day: 'LUNES'})}>
+      <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.MyRoutineDayDetail, { screen: Routes.MyRoutineDayDetail, params: {day: 'LUNES'}})}>
         <Text style={styles.textOption}>Lunes</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.MyRoutineDayDetail, {day: 'MARTES'})}>

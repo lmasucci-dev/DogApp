@@ -7,13 +7,14 @@ import MyRoutineDayDetail from './screens/MyRoutineDayDetail';
 import Excercises from './screens/Excercises';
 import RoutinesTemplate from './screens/RoutinesTemplate';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { RoutesParamList } from '../constants/routesParamList';
 
-const AppStack = createNativeStackNavigator();
+const AppStack = createNativeStackNavigator<RoutesParamList>();
 
 const Navigator = () => {
     return (
         <AppStack.Navigator>
-            <AppStack.Screen name={Routes.Home} component={Home} />
+            <AppStack.Screen name={Routes.Home} component={Home}/>
             <AppStack.Screen name={Routes.Users} component={Users} />
             <AppStack.Screen name={Routes.MyRoutine} component={MyRoutine} />
             <AppStack.Screen name={Routes.MyRoutineDayDetail} component={MyRoutineDayDetail} />
