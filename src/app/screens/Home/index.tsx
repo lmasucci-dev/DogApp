@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View, StyleSheet, ImageBackground, SafeAreaView
 import { useNavigation } from '@react-navigation/native';
 import Routes from '../../../constants/constants';
 import pesas from '../../../assets/pesas.jpg';
-import { Icon } from '@rneui/themed';
+
 
 
 
@@ -22,15 +22,6 @@ const Home = () => {
         source={pesas}
         >
       <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.MyRoutine)}>
-                <Icon
-        name='rowing' />
-              <Icon
-        reverse
-        name='ios-american-football'
-        type='ionicon'
-        color='#517fa4'
-      />
-
         <Text style={styles.textOption}>Mi rutina</Text>
       </TouchableOpacity>
       {userInfo.userRole === 'ADMIN' ?
