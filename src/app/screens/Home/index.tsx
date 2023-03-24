@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { FlatList, Text, TouchableOpacity, View, StyleSheet } from 'react-native'
+import { Text, TouchableOpacity, View, StyleSheet, ImageBackground, SafeAreaView } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
-import { SearchBar } from 'react-native-elements';
 import Routes from '../../../constants/constants';
+import pesas from '../../../assets/pesas.jpg';
+import { Icon } from '@rneui/themed';
+
 
 
 const MOCK_RESPONSE_USER =
@@ -14,8 +16,21 @@ const Home = () => {
   const [userInfo, setUserInfo] = useState(MOCK_RESPONSE_USER)
   return (
     <View style={styles.container}>
-      <Text style={{ textAlign: 'center', padding: 10, fontSize: 22, fontWeight: 'bold' }}>¡Bienvenido {userInfo.name}!</Text>
+      <ImageBackground
+        style={styles.image}
+        imageStyle={{opacity: 0.4}}
+        source={pesas}
+        >
       <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.MyRoutine)}>
+                <Icon
+        name='rowing' />
+              <Icon
+        reverse
+        name='ios-american-football'
+        type='ionicon'
+        color='#517fa4'
+      />
+
         <Text style={styles.textOption}>Mi rutina</Text>
       </TouchableOpacity>
       {userInfo.userRole === 'ADMIN' ?
@@ -26,18 +41,28 @@ const Home = () => {
           </TouchableOpacity><TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.RoutinesTemplate)}>
             <Text style={styles.textOption}>Plantilla de rutinas</Text>
           </TouchableOpacity></>) : null}
+          </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 32,
-    paddingHorizontal: 18,
     flex: 1,
+    backgroundColor:'#1C1C1E'
   },
-  textOption: { color: 'white', fontWeight: '600', fontSize: 18 },
-  touchableOption: { justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue', height: 35, margin: 5, borderRadius: 6 }
+  image: {
+    flex: 1
+  },
+  title: {
+    fontSize: 34,
+    fontWeight: 'normal',
+    marginBottom: 35,
+    marginTop: 20,
+    color: '#FFFFFF'
+},
+  textOption: { color: '#FFFFFF', fontWeight: '400', fontSize: 20 },
+  touchableOption: { justifyContent: 'center', alignItems: 'flex-start', borderBottomColor: '#2C2C2E', borderBottomWidth: 3, padding: 25 }
 });
 
 export default Home;

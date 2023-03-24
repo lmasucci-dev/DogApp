@@ -13,17 +13,27 @@ import { RoutesParamList } from '../constants/routesParamList';
 
 const AppStack = createNativeStackNavigator<RoutesParamList>();
 
+const defaultStyleHeader =  {
+    headerStyle: {
+        backgroundColor: '#1C1C1E',
+    },
+    headerTintColor: '#FFFFFF',
+    headerTitleStyle: {
+        fontWeight: 'bold',
+        fontSize: 22
+    }}
+
 const Navigator = () => {
     return (
         <AppStack.Navigator>
-            <AppStack.Screen name={Routes.Home} component={Home} options={{headerShown: false}}/>
-            <AppStack.Screen name={Routes.Users} component={Users} />
-            <AppStack.Screen name={Routes.UserDetail} component={UserDetail} />
-            <AppStack.Screen name={Routes.CreateUser} component={CreateUser} />
-            <AppStack.Screen name={Routes.MyRoutine} component={MyRoutine} />
-            <AppStack.Screen name={Routes.MyRoutineDayDetail} component={MyRoutineDayDetail} />
-            <AppStack.Screen name={Routes.Excercises} component={Excercises} />
-            <AppStack.Screen name={Routes.RoutinesTemplate} component={RoutinesTemplate} />
+            <AppStack.Screen name={Routes.Home} component={Home} options={defaultStyleHeader} />
+            <AppStack.Screen name={Routes.Users} component={Users} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.UserDetail} component={UserDetail} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.CreateUser} component={CreateUser} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.MyRoutine} component={MyRoutine} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.MyRoutineDayDetail} component={MyRoutineDayDetail} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.Excercises} component={Excercises} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.RoutinesTemplate} component={RoutinesTemplate} options={defaultStyleHeader}/>
         </AppStack.Navigator>
     )
 }
