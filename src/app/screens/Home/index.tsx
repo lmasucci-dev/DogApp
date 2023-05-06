@@ -53,7 +53,9 @@ const styles = StyleSheet.create({
     color: '#FFFFFF'
 },
   textOption: { color: '#FFFFFF', fontWeight: '400', fontSize: 20 },
-  touchableOption: { justifyContent: 'center', alignItems: 'flex-start', borderBottomColor: '#2C2C2E', borderBottomWidth: 3, padding: 25 }
+  //touchableOption: { justifyContent: 'center', alignItems: 'flex-start', borderBottomColor: '#2C2C2E', borderBottomWidth: 3, padding: 25 }
+  touchableOption: { justifyContent: 'center', alignItems: 'center', backgroundColor: '#2C2C2E', height: 75, margin: 5, borderRadius: 12, borderColor: '#000000', borderWidth: 1 }
+
 });
 
 export default Home;

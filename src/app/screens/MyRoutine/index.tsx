@@ -7,6 +7,7 @@ const MyRoutine = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
+      <Text style={styles.text}>SEMANA</Text>
       <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.MyRoutineDayDetail, { screen: Routes.MyRoutineDayDetail, params: {day: 'LUNES'}})}>
         <Text style={styles.textOption}>Lunes</Text>
       </TouchableOpacity>
@@ -34,12 +35,14 @@ const MyRoutine = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 32,
     paddingHorizontal: 18,
     flex: 1,
+    backgroundColor: '#000000',
+    justifyContent: 'center'
   },
-  textOption: { color: 'white', fontWeight: '600', fontSize: 18 },
-  touchableOption: { justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue', height: 35, margin: 5, borderRadius: 6 }
+  text: { color: '#FFFFFF', fontWeight: 'bold', fontSize: 24, textAlign: 'center', paddingBottom: 10},
+  textOption: { color: '#FFFFFF', fontWeight: '600', fontSize: 18 },
+  touchableOption: { justifyContent: 'center', alignItems: 'center', backgroundColor: '#2C2C2E', height: 75, margin: 5, borderRadius: 12 }
 });
 
 export default MyRoutine;
