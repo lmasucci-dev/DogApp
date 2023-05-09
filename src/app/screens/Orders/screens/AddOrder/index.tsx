@@ -10,11 +10,11 @@ import {
     Pressable
 } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import Routes from '../../../constants/constants';
-import { database } from '../../../config/firebaseConfig'
+import Routes from '../../../../../constants/constants';
+import { database } from '../../../../../config/firebaseConfig'
 import { collection, addDoc, query, getDocs } from 'firebase/firestore'
 
-const CreateUser = (props) => {
+const AddOrder = (props) => {
     const navigation = useNavigation();
     const initalState = {
         name: '',
@@ -197,4 +197,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CreateUser;
+export default AddOrder;

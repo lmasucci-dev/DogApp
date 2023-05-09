@@ -1,13 +1,10 @@
 import React from 'react';
 import Routes from '../constants/constants';
 import Home from './screens/Home';
-import Users from './screens/Users';
-import CreateUser from './screens/CreateUser';
-import MyRoutine from './screens/MyRoutine';
-import MyRoutineDayDetail from './screens/MyRoutineDayDetail';
-import Excercises from './screens/Excercises';
-import RoutinesTemplate from './screens/RoutinesTemplate';
-import UserDetail from './screens/UserDetail/index';
+import Orders from './screens/Orders';
+import AddOrder from './screens/Orders/screens/AddOrder';
+import Products from './screens/Products';
+import Reports from './screens/Reports';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RoutesParamList } from '../constants/routesParamList';
 
@@ -27,13 +24,10 @@ const Navigator = () => {
     return (
         <AppStack.Navigator>
             <AppStack.Screen name={Routes.Home} component={Home} options={defaultStyleHeader} />
-            <AppStack.Screen name={Routes.Users} component={Users} options={defaultStyleHeader}/>
-            <AppStack.Screen name={Routes.UserDetail} component={UserDetail} options={defaultStyleHeader}/>
-            <AppStack.Screen name={Routes.CreateUser} component={CreateUser} options={defaultStyleHeader}/>
-            <AppStack.Screen name={Routes.MyRoutine} component={MyRoutine} options={defaultStyleHeader}/>
-            <AppStack.Screen name={Routes.MyRoutineDayDetail} component={MyRoutineDayDetail} options={defaultStyleHeader}/>
-            <AppStack.Screen name={Routes.Excercises} component={Excercises} options={defaultStyleHeader}/>
-            <AppStack.Screen name={Routes.RoutinesTemplate} component={RoutinesTemplate} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.Orders} component={Orders} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.AddOrder} component={AddOrder} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.Products} component={Products} options={defaultStyleHeader}/>
+            <AppStack.Screen name={Routes.Reports} component={Reports} options={defaultStyleHeader}/>
         </AppStack.Navigator>
     )
 }

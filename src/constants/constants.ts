@@ -1,12 +1,9 @@
 enum Routes {
     Home = 'Home',
-    Users = 'Usuarios',
-    UserDetail = 'Detalle del usuario',
-    CreateUser = 'Crear usuario',
-    MyRoutine = 'Mi rutina',
-    MyRoutineDayDetail = 'Hoy',
-    Excercises = 'Ejercicios',
-    RoutinesTemplate = 'Plantilla de rutinas'
+    Orders = 'Pedidos',
+    AddOrder = 'AddOrder',
+    Products = 'Productos',
+    Reports = 'Reportes',
   }
   
   export default Routes;

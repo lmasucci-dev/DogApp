@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Text, TouchableOpacity, View, StyleSheet, ImageBackground, SafeAreaView } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import Routes from '../../../constants/constants';
-import pesas from '../../../assets/pesas.jpg';
+import logo from '../../../assets/logo.jpg';
 
 
 
@@ -18,21 +18,20 @@ const Home = () => {
     <View style={styles.container}>
       <ImageBackground
         style={styles.image}
-        imageStyle={{opacity: 0.4}}
-        source={pesas}
-        >
-      <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.MyRoutine)}>
-        <Text style={styles.textOption}>Mi rutina</Text>
-      </TouchableOpacity>
-      {userInfo.userRole === 'ADMIN' ?
-        (<><TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.Users)}>
-          <Text style={styles.textOption}>Usuarios</Text>
-        </TouchableOpacity><TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.Excercises)}>
-            <Text style={styles.textOption}>Ejercicios</Text>
-          </TouchableOpacity><TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.RoutinesTemplate)}>
-            <Text style={styles.textOption}>Plantilla de rutinas</Text>
-          </TouchableOpacity></>) : null}
-          </ImageBackground>
+        imageStyle={{ opacity: 0.4 }}
+        source={logo}
+        resizeMode='center'
+      >
+        <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.Orders)}>
+          <Text style={styles.textOption}>Pedidos</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.Products)}>
+          <Text style={styles.textOption}>Productos</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.touchableOption} onPress={() => navigation.navigate(Routes.Reports)}>
+          <Text style={styles.textOption}>Reportes</Text>
+        </TouchableOpacity>
+      </ImageBackground>
     </View>
   );
 }
@@ -40,7 +39,7 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#1C1C1E'
+    backgroundColor: '#1C1C1E'
   },
   image: {
     flex: 1
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
     marginBottom: 35,
     marginTop: 20,
     color: '#FFFFFF'
-},
+  },
   textOption: { color: '#FFFFFF', fontWeight: '400', fontSize: 20 },
   //touchableOption: { justifyContent: 'center', alignItems: 'flex-start', borderBottomColor: '#2C2C2E', borderBottomWidth: 3, padding: 25 }
   touchableOption: { justifyContent: 'center', alignItems: 'center', backgroundColor: '#2C2C2E', height: 75, margin: 5, borderRadius: 12, borderColor: '#000000', borderWidth: 1 }
